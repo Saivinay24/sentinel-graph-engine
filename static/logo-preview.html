@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Logo Options — SENTINEL-GRAPH</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0e14;
+    color: #f1f3fc;
+    min-height: 100vh;
+    padding: 48px 40px;
+    font-family: 'Exo 2', sans-serif;
+  }
+  .page-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #44484f;
+    margin-bottom: 48px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .card {
+    background: #0f141a;
+    border: 1px solid #1b2028;
+    border-radius: 8px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #81ecff33; }
+  .card-num {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #44484f;
+    text-transform: uppercase;
+  }
+
+  /* Logo row */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .logo-text {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #81ecff;
+    text-shadow: 0 0 14px rgba(129,236,255,0.35);
+  }
+
+  /* Dark bg swatch */
+  .swatch-dark { background: #0a0e14; padding: 20px 24px; border-radius: 6px; display:flex; align-items:center; }
+  /* Light bg swatch */
+  .swatch-light { background: #e5e7eb; padding: 20px 24px; border-radius: 6px; display:flex; align-items:center; }
+  .swatch-light .logo-text { color: #005762; text-shadow: none; }
+  .swatch-mid { background: #151a21; padding: 20px 24px; border-radius: 6px; display:flex; align-items:center; }
+
+  .swatches { display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .desc {
+    font-size: 11px;
+    color: #72757d;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-label">SVG Logo Mark Options — SENTINEL-GRAPH</div>
+
+<div class="grid">
+
+  <!-- ── Option 1: Hex Graph ── -->
+  <div class="card">
+    <div class="card-num">Option 1 — Hex Graph</div>
+    <div class="swatches">
+      <div class="swatch-dark">
+        <div class="logo">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,2 26,8.5 26,21.5 15,28 4,21.5 4,8.5" stroke="#81ecff" stroke-width="1.2" fill="rgba(129,236,255,0.04)"/>
+            <line x1="15" y1="15" x2="5.5"  y2="9.5"  stroke="#81ecff" stroke-width="0.9" opacity="0.45"/>
+            <line x1="15" y1="15" x2="24.5" y2="9.5"  stroke="#81ecff" stroke-width="0.9" opacity="0.45"/>
+            <line x1="15" y1="15" x2="24.5" y2="20.5" stroke="#81ecff" stroke-width="0.9" opacity="0.45"/>
+            <line x1="15" y1="15" x2="5.5"  y2="20.5" stroke="#81ecff" stroke-width="0.9" opacity="0.45"/>
+            <circle cx="5.5"  cy="9.5"  r="1.8" fill="#81ecff" opacity="0.55"/>
+            <circle cx="24.5" cy="9.5"  r="1.8" fill="#81ecff" opacity="0.55"/>
+            <circle cx="24.5" cy="20.5" r="1.8" fill="#81ecff" opacity="0.55"/>
+            <circle cx="5.5"  cy="20.5" r="1.8" fill="#81ecff" opacity="0.55"/>
+            <circle cx="15"   cy="15"   r="3.2" fill="#81ecff" opacity="0.12"/>
+            <circle cx="15"   cy="15"   r="2"   fill="#81ecff"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+      <div class="swatch-mid">
+        <div class="logo">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,2 26,8.5 26,21.5 15,28 4,21.5 4,8.5" stroke="#81ecff" stroke-width="1.2" fill="rgba(129,236,255,0.04)"/>
+            <line x1="15" y1="15" x2="5.5"  y2="9.5"  stroke="#81ecff" stroke-width="0.9" opacity="0.45"/>
+            <line x1="15" y1="15" x2="24.5" y2="9.5"  stroke="#81ecff" stroke-width="0.9" opacity="0.45"/>
+            <line x1="15" y1="15" x2="24.5" y2="20.5" stroke="#81ecff" stroke-width="0.9" opacity="0.45"/>
+            <line x1="15" y1="15" x2="5.5"  y2="20.5" stroke="#81ecff" stroke-width="0.9" opacity="0.45"/>
+            <circle cx="5.5"  cy="9.5"  r="1.8" fill="#81ecff" opacity="0.55"/>
+            <circle cx="24.5" cy="9.5"  r="1.8" fill="#81ecff" opacity="0.55"/>
+            <circle cx="24.5" cy="20.5" r="1.8" fill="#81ecff" opacity="0.55"/>
+            <circle cx="5.5"  cy="20.5" r="1.8" fill="#81ecff" opacity="0.55"/>
+            <circle cx="15"   cy="15"   r="3.2" fill="#81ecff" opacity="0.12"/>
+            <circle cx="15"   cy="15"   r="2"   fill="#81ecff"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">Hexagonal border with node-graph interior. Classic network topology feel.</div>
+  </div>
+
+  <!-- ── Option 2: Shield + Node ── -->
+  <div class="card">
+    <div class="card-num">Option 2 — Shield Node</div>
+    <div class="swatches">
+      <div class="swatch-dark">
+        <div class="logo">
+          <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- shield outline -->
+            <path d="M14 1.5 L26 6.5 L26 16 Q26 24 14 28.5 Q2 24 2 16 L2 6.5 Z"
+                  stroke="#81ecff" stroke-width="1.2" fill="rgba(129,236,255,0.05)" stroke-linejoin="round"/>
+            <!-- inner graph: 3 nodes triangle -->
+            <line x1="14" y1="10" x2="9"  y2="18" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="14" y1="10" x2="19" y2="18" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="9"  y1="18" x2="19" y2="18" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <circle cx="14" cy="10" r="2.2" fill="#81ecff"/>
+            <circle cx="9"  cy="18" r="1.7" fill="#81ecff" opacity="0.7"/>
+            <circle cx="19" cy="18" r="1.7" fill="#81ecff" opacity="0.7"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+      <div class="swatch-mid">
+        <div class="logo">
+          <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 1.5 L26 6.5 L26 16 Q26 24 14 28.5 Q2 24 2 16 L2 6.5 Z"
+                  stroke="#81ecff" stroke-width="1.2" fill="rgba(129,236,255,0.05)" stroke-linejoin="round"/>
+            <line x1="14" y1="10" x2="9"  y2="18" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="14" y1="10" x2="19" y2="18" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="9"  y1="18" x2="19" y2="18" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <circle cx="14" cy="10" r="2.2" fill="#81ecff"/>
+            <circle cx="9"  cy="18" r="1.7" fill="#81ecff" opacity="0.7"/>
+            <circle cx="19" cy="18" r="1.7" fill="#81ecff" opacity="0.7"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">Security shield housing a minimal graph. Communicates protection + intelligence.</div>
+  </div>
+
+  <!-- ── Option 3: Radial Pulse ── -->
+  <div class="card">
+    <div class="card-num">Option 3 — Radial Pulse</div>
+    <div class="swatches">
+      <div class="swatch-dark">
+        <div class="logo">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- pulse rings -->
+            <circle cx="15" cy="15" r="13" stroke="#81ecff" stroke-width="0.7" opacity="0.15"/>
+            <circle cx="15" cy="15" r="9"  stroke="#81ecff" stroke-width="0.7" opacity="0.25"/>
+            <circle cx="15" cy="15" r="5"  stroke="#81ecff" stroke-width="0.7" opacity="0.4"/>
+            <!-- 6 spokes -->
+            <line x1="15" y1="15" x2="15" y2="2"  stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="26.3" y2="8.5" stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="26.3" y2="21.5" stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="15" y2="28"  stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="3.7" y2="21.5" stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="3.7" y2="8.5"  stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <!-- outer nodes -->
+            <circle cx="15"    cy="2"    r="1.6" fill="#00d4ec"/>
+            <circle cx="26.3"  cy="8.5"  r="1.6" fill="#81ecff" opacity="0.7"/>
+            <circle cx="26.3"  cy="21.5" r="1.6" fill="#81ecff" opacity="0.7"/>
+            <circle cx="15"    cy="28"   r="1.6" fill="#81ecff" opacity="0.5"/>
+            <circle cx="3.7"   cy="21.5" r="1.6" fill="#81ecff" opacity="0.7"/>
+            <circle cx="3.7"   cy="8.5"  r="1.6" fill="#81ecff" opacity="0.7"/>
+            <!-- center -->
+            <circle cx="15" cy="15" r="2.8" fill="#81ecff" opacity="0.15"/>
+            <circle cx="15" cy="15" r="1.8" fill="#81ecff"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+      <div class="swatch-mid">
+        <div class="logo">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="13" stroke="#81ecff" stroke-width="0.7" opacity="0.15"/>
+            <circle cx="15" cy="15" r="9"  stroke="#81ecff" stroke-width="0.7" opacity="0.25"/>
+            <circle cx="15" cy="15" r="5"  stroke="#81ecff" stroke-width="0.7" opacity="0.4"/>
+            <line x1="15" y1="15" x2="15" y2="2"  stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="26.3" y2="8.5" stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="26.3" y2="21.5" stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="15" y2="28"  stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="3.7" y2="21.5" stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <line x1="15" y1="15" x2="3.7" y2="8.5"  stroke="#81ecff" stroke-width="0.9" opacity="0.35"/>
+            <circle cx="15"    cy="2"    r="1.6" fill="#00d4ec"/>
+            <circle cx="26.3"  cy="8.5"  r="1.6" fill="#81ecff" opacity="0.7"/>
+            <circle cx="26.3"  cy="21.5" r="1.6" fill="#81ecff" opacity="0.7"/>
+            <circle cx="15"    cy="28"   r="1.6" fill="#81ecff" opacity="0.5"/>
+            <circle cx="3.7"   cy="21.5" r="1.6" fill="#81ecff" opacity="0.7"/>
+            <circle cx="3.7"   cy="8.5"  r="1.6" fill="#81ecff" opacity="0.7"/>
+            <circle cx="15" cy="15" r="2.8" fill="#81ecff" opacity="0.15"/>
+            <circle cx="15" cy="15" r="1.8" fill="#81ecff"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">Radar / pulse rings with spoke nodes. Surveillance and detection energy.</div>
+  </div>
+
+  <!-- ── Option 4: Angular S Monogram ── -->
+  <div class="card">
+    <div class="card-num">Option 4 — Angular Monogram</div>
+    <div class="swatches">
+      <div class="swatch-dark">
+        <div class="logo">
+          <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- SG letterform — angular / condensed -->
+            <!-- S shape: top bar, mid bar, bottom bar + verticals -->
+            <polyline points="20,4 8,4 8,14 20,14 20,26 8,26" stroke="#81ecff" stroke-width="2.2" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+            <!-- small accent node on corner -->
+            <circle cx="20" cy="4"  r="1.8" fill="#00d4ec"/>
+            <circle cx="8"  cy="14" r="1.8" fill="#81ecff" opacity="0.6"/>
+            <circle cx="20" cy="26" r="1.8" fill="#81ecff" opacity="0.4"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+      <div class="swatch-mid">
+        <div class="logo">
+          <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="20,4 8,4 8,14 20,14 20,26 8,26" stroke="#81ecff" stroke-width="2.2" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+            <circle cx="20" cy="4"  r="1.8" fill="#00d4ec"/>
+            <circle cx="8"  cy="14" r="1.8" fill="#81ecff" opacity="0.6"/>
+            <circle cx="20" cy="26" r="1.8" fill="#81ecff" opacity="0.4"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">Angular "S" letterform with graph node accents. Minimal, geometric, distinctive.</div>
+  </div>
+
+  <!-- ── Option 5: Diamond Crosshair ── -->
+  <div class="card">
+    <div class="card-num">Option 5 — Diamond Crosshair</div>
+    <div class="swatches">
+      <div class="swatch-dark">
+        <div class="logo">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- outer diamond -->
+            <polygon points="15,2 28,15 15,28 2,15" stroke="#81ecff" stroke-width="1.1" fill="rgba(129,236,255,0.04)"/>
+            <!-- crosshair lines clipped to diamond -->
+            <line x1="15" y1="2"  x2="15" y2="28" stroke="#81ecff" stroke-width="0.7" opacity="0.2"/>
+            <line x1="2"  y1="15" x2="28" y2="15" stroke="#81ecff" stroke-width="0.7" opacity="0.2"/>
+            <!-- inner diamond -->
+            <polygon points="15,8 22,15 15,22 8,15" stroke="#81ecff" stroke-width="0.8" fill="none" opacity="0.4"/>
+            <!-- corner nodes -->
+            <circle cx="15" cy="2"  r="1.8" fill="#00d4ec"/>
+            <circle cx="28" cy="15" r="1.8" fill="#81ecff" opacity="0.6"/>
+            <circle cx="15" cy="28" r="1.8" fill="#81ecff" opacity="0.4"/>
+            <circle cx="2"  cy="15" r="1.8" fill="#81ecff" opacity="0.6"/>
+            <!-- center -->
+            <circle cx="15" cy="15" r="2.5" fill="#81ecff" opacity="0.15"/>
+            <circle cx="15" cy="15" r="1.6" fill="#81ecff"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+      <div class="swatch-mid">
+        <div class="logo">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,2 28,15 15,28 2,15" stroke="#81ecff" stroke-width="1.1" fill="rgba(129,236,255,0.04)"/>
+            <line x1="15" y1="2"  x2="15" y2="28" stroke="#81ecff" stroke-width="0.7" opacity="0.2"/>
+            <line x1="2"  y1="15" x2="28" y2="15" stroke="#81ecff" stroke-width="0.7" opacity="0.2"/>
+            <polygon points="15,8 22,15 15,22 8,15" stroke="#81ecff" stroke-width="0.8" fill="none" opacity="0.4"/>
+            <circle cx="15" cy="2"  r="1.8" fill="#00d4ec"/>
+            <circle cx="28" cy="15" r="1.8" fill="#81ecff" opacity="0.6"/>
+            <circle cx="15" cy="28" r="1.8" fill="#81ecff" opacity="0.4"/>
+            <circle cx="2"  cy="15" r="1.8" fill="#81ecff" opacity="0.6"/>
+            <circle cx="15" cy="15" r="2.5" fill="#81ecff" opacity="0.15"/>
+            <circle cx="15" cy="15" r="1.6" fill="#81ecff"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">Diamond with crosshair targeting. Threat detection / targeting aesthetic.</div>
+  </div>
+
+  <!-- ── Option 6: Bracket Graph ── -->
+  <div class="card">
+    <div class="card-num">Option 6 — Bracket Graph</div>
+    <div class="swatches">
+      <div class="swatch-dark">
+        <div class="logo">
+          <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- left bracket -->
+            <polyline points="10,3 6,3 6,25 10,25" stroke="#81ecff" stroke-width="1.5" fill="none" stroke-linecap="square" opacity="0.7"/>
+            <!-- right bracket -->
+            <polyline points="24,3 28,3 28,25 24,25" stroke="#81ecff" stroke-width="1.5" fill="none" stroke-linecap="square" opacity="0.7"/>
+            <!-- internal graph: 4 nodes -->
+            <line x1="13" y1="9"  x2="21" y2="9"  stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="13" y1="9"  x2="13" y2="19" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="21" y1="9"  x2="21" y2="19" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="13" y1="19" x2="21" y2="19" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="13" y1="9"  x2="21" y2="19" stroke="#81ecff" stroke-width="0.9" opacity="0.25"/>
+            <circle cx="13" cy="9"  r="2"   fill="#00d4ec"/>
+            <circle cx="21" cy="9"  r="2"   fill="#81ecff"/>
+            <circle cx="21" cy="19" r="2"   fill="#81ecff" opacity="0.7"/>
+            <circle cx="13" cy="19" r="2"   fill="#81ecff" opacity="0.7"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+      <div class="swatch-mid">
+        <div class="logo">
+          <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="10,3 6,3 6,25 10,25" stroke="#81ecff" stroke-width="1.5" fill="none" stroke-linecap="square" opacity="0.7"/>
+            <polyline points="24,3 28,3 28,25 24,25" stroke="#81ecff" stroke-width="1.5" fill="none" stroke-linecap="square" opacity="0.7"/>
+            <line x1="13" y1="9"  x2="21" y2="9"  stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="13" y1="9"  x2="13" y2="19" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="21" y1="9"  x2="21" y2="19" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="13" y1="19" x2="21" y2="19" stroke="#81ecff" stroke-width="0.9" opacity="0.5"/>
+            <line x1="13" y1="9"  x2="21" y2="19" stroke="#81ecff" stroke-width="0.9" opacity="0.25"/>
+            <circle cx="13" cy="9"  r="2"   fill="#00d4ec"/>
+            <circle cx="21" cy="9"  r="2"   fill="#81ecff"/>
+            <circle cx="21" cy="19" r="2"   fill="#81ecff" opacity="0.7"/>
+            <circle cx="13" cy="19" r="2"   fill="#81ecff" opacity="0.7"/>
+          </svg>
+          <span class="logo-text">SENTINEL-GRAPH</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">Code brackets containing a graph. Technical / dev-tool meets security ops.</div>
+  </div>
+
+</div>
+</body>
+</html>

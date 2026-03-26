@@ -1,0 +1,32 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Data (large generated files)
+data/generated/*.pkl
+data/generated/*.pt
+data/cert/
+
+# Models (large binaries)
+models/*.pt
+models/*.bin
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+*.log
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Font Preview — SENTINEL-GRAPH</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@400;600;700;900&family=Bebas+Neue&family=Exo+2:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0e14;
+    color: #f1f3fc;
+    min-height: 100vh;
+    padding: 40px 32px;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  .page-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #44484f;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    background: #0f141a;
+    border: 1px solid #1b2028;
+    border-radius: 6px;
+    padding: 32px 28px 28px;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+
+  .card:hover {
+    border-color: #81ecff44;
+    transform: translateY(-2px);
+  }
+
+  .card.current {
+    border-color: #44484f;
+    opacity: 0.6;
+  }
+
+  .badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+
+  .badge.current-badge {
+    background: #20262f;
+    color: #72757d;
+  }
+
+  .badge.option-badge {
+    background: #00d4ec18;
+    color: #81ecff;
+    border: 1px solid #81ecff30;
+  }
+
+  .font-name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #72757d;
+    margin-bottom: 20px;
+  }
+
+  .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #81ecff;
+    text-shadow: 0 0 16px rgba(129,236,255,0.35);
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+
+  .hero-text {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a8abb3;
+    margin-bottom: 20px;
+  }
+
+  .divider {
+    height: 1px;
+    background: #1b2028;
+    margin: 18px 0;
+  }
+
+  .sample-ui {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ui-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #44484f;
+  }
+
+  .stat-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .stat-num {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f1f3fc;
+    line-height: 1;
+  }
+
+  .stat-unit {
+    font-size: 11px;
+    color: #72757d;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  /* Per-font classes */
+  .f-space-grotesk { font-family: 'Space Grotesk', sans-serif; }
+  .f-rajdhani      { font-family: 'Rajdhani', sans-serif; }
+  .f-orbitron      { font-family: 'Orbitron', sans-serif; }
+  .f-bebas         { font-family: 'Bebas Neue', sans-serif; }
+  .f-exo2          { font-family: 'Exo 2', sans-serif; }
+  .f-ibm           { font-family: 'IBM Plex Sans', sans-serif; }
+
+  /* Orbitron is naturally smaller-looking */
+  .f-orbitron.logo-text { font-size: 16px; letter-spacing: 0.08em; }
+  .f-bebas.logo-text    { font-size: 28px; letter-spacing: 0.06em; }
+  .f-bebas.hero-text    { font-size: 15px; letter-spacing: 0.1em; }
+</style>
+</head>
+<body>
+
+<div class="page-title">Font Preview — SENTINEL-GRAPH Logo &amp; Headlines</div>
+
+<div class="grid">
+
+  <!-- 0. Current -->
+  <div class="card current">
+    <span class="badge current-badge">Current</span>
+    <div class="font-name">Space Grotesk</div>
+    <div class="logo-text f-space-grotesk">SENTINEL-GRAPH</div>
+    <div class="hero-text f-space-grotesk">Operational Command</div>
+    <div class="divider"></div>
+    <div class="sample-ui">
+      <div class="ui-label">Threats Detected</div>
+      <div class="stat-row">
+        <div class="stat-num f-space-grotesk">2,847</div>
+        <div class="stat-unit">events / 24h</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Rajdhani -->
+  <div class="card">
+    <span class="badge option-badge">Option 1</span>
+    <div class="font-name">Rajdhani</div>
+    <div class="logo-text f-rajdhani">SENTINEL-GRAPH</div>
+    <div class="hero-text f-rajdhani">Operational Command</div>
+    <div class="divider"></div>
+    <div class="sample-ui">
+      <div class="ui-label">Threats Detected</div>
+      <div class="stat-row">
+        <div class="stat-num f-rajdhani">2,847</div>
+        <div class="stat-unit">events / 24h</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Orbitron -->
+  <div class="card">
+    <span class="badge option-badge">Option 2</span>
+    <div class="font-name">Orbitron</div>
+    <div class="logo-text f-orbitron">SENTINEL-GRAPH</div>
+    <div class="hero-text f-orbitron">Operational Command</div>
+    <div class="divider"></div>
+    <div class="sample-ui">
+      <div class="ui-label">Threats Detected</div>
+      <div class="stat-row">
+        <div class="stat-num f-orbitron">2,847</div>
+        <div class="stat-unit">events / 24h</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Bebas Neue -->
+  <div class="card">
+    <span class="badge option-badge">Option 3</span>
+    <div class="font-name">Bebas Neue</div>
+    <div class="logo-text f-bebas">SENTINEL-GRAPH</div>
+    <div class="hero-text f-bebas">Operational Command</div>
+    <div class="divider"></div>
+    <div class="sample-ui">
+      <div class="ui-label">Threats Detected</div>
+      <div class="stat-row">
+        <div class="stat-num f-bebas">2,847</div>
+        <div class="stat-unit">events / 24h</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Exo 2 -->
+  <div class="card">
+    <span class="badge option-badge">Option 4</span>
+    <div class="font-name">Exo 2</div>
+    <div class="logo-text f-exo2">SENTINEL-GRAPH</div>
+    <div class="hero-text f-exo2">Operational Command</div>
+    <div class="divider"></div>
+    <div class="sample-ui">
+      <div class="ui-label">Threats Detected</div>
+      <div class="stat-row">
+        <div class="stat-num f-exo2">2,847</div>
+        <div class="stat-unit">events / 24h</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. IBM Plex Sans -->
+  <div class="card">
+    <span class="badge option-badge">Option 5</span>
+    <div class="font-name">IBM Plex Sans</div>
+    <div class="logo-text f-ibm">SENTINEL-GRAPH</div>
+    <div class="hero-text f-ibm">Operational Command</div>
+    <div class="divider"></div>
+    <div class="sample-ui">
+      <div class="ui-label">Threats Detected</div>
+      <div class="stat-row">
+        <div class="stat-num f-ibm">2,847</div>
+        <div class="stat-unit">events / 24h</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

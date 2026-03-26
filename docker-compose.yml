@@ -1,0 +1,51 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Sentinel-Graph ITDR — Docker Compose
+# Single service: FastAPI backend (serves API + static dashboard + landing)
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+  # ── FastAPI backend + static UI ─────────────────────────────────────────────
+  sentinel-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentinel-engine
+    restart: unless-stopped
+    command: >
+      uvicorn api.main:app
+        --host 0.0.0.0
+        --port 8000
+        --workers 2
+        --log-level info
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/generated:/app/data/generated
+      - ./data/cert:/app/data/cert:ro
+      - ./models:/app/models
+      - ./static:/app/static:ro
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test:
+        - "CMD"
+        - "python"
+        - "-c"
+        - |
+          import urllib.request, sys
+          try:
+            urllib.request.urlopen('http://localhost:8000/health', timeout=8)
+            sys.exit(0)
+          except Exception:
+            sys.exit(1)
+      interval: 30s
+      timeout: 10s
+      start_period: 60s
+      retries: 3
+
+networks:
+  default:
+    name: sentinel-net

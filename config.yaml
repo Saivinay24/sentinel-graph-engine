@@ -1,0 +1,108 @@
+# Sentinel-Graph Engine Configuration
+# Atos Srijan 2026 — PS 11: AI-Driven Identity Risk Scoring
+
+# --- Data Generation ---
+data:
+  num_users: 500
+  num_roles: 30
+  num_resources: 100
+  num_events: 50000
+  attack_ratio: 0.05  # 5% of events are attacks
+  departments:
+    - Engineering
+    - Finance
+    - Human Resources
+    - Marketing
+    - Sales
+    - IT Operations
+    - Legal
+    - Executive
+  seniority_levels:
+    - Junior
+    - Mid
+    - Senior
+    - Lead
+    - Director
+  resource_sensitivity:
+    - Low
+    - Medium
+    - High
+    - Critical
+  offices:
+    - city: Bangalore
+      lat: 12.9716
+      lon: 77.5946
+    - city: Mumbai
+      lat: 19.0760
+      lon: 72.8777
+    - city: London
+      lat: 51.5074
+      lon: -0.1278
+    - city: New York
+      lat: 40.7128
+      lon: -74.0060
+    - city: Singapore
+      lat: 1.3521
+      lon: 103.8198
+    - city: São Paulo
+      lat: -23.5505
+      lon: -46.6333
+
+# --- Privacy ---
+privacy:
+  k_anonymity: 5
+  epsilon: 1.0   # Differential privacy budget
+  mask_pii: true
+
+# --- Graph Construction ---
+graph:
+  edge_weight_method: frequency_recency  # frequency_recency | frequency_only
+  recency_decay: 0.95  # Exponential decay factor for recency weighting
+
+# --- GraphSAGE Model ---
+model:
+  hidden_dim: 64
+  num_layers: 2
+  aggregation: mean  # mean | max | lstm
+  neighbor_sampling: [25, 10]  # First-hop, second-hop
+  learning_rate: 0.01
+  epochs: 100
+  batch_size: 256
+  dropout: 0.3
+  negative_sampling_ratio: 1.0
+
+# --- Scoring Engine ---
+scoring:
+  weights:
+    temporal: 0.20
+    geo_velocity: 0.25
+    device_trust: 0.15
+    entity_affinity: 0.15
+    peer_alignment: 0.25
+  thresholds:
+    allow: 45        # 0-45:  Allow  (covers normal P95 = 45.8)
+    mfa: 60          # 46-60: Step-up MFA (borderline zone)
+    block: 85        # 61-85: Block + Admin Alert (attack P25 = 71.0)
+    critical: 100    # 86-100: Block + SOC (attack P75 = 91.2)
+  geo_velocity:
+    max_speed_kmh: 900  # Max plausible travel speed (commercial flight)
+  temporal:
+    business_hours_start: 8   # 8 AM
+    business_hours_end: 18    # 6 PM
+  device:
+    new_device_score: 30
+    unregistered_score: 20
+    jailbroken_score: 40
+
+# --- Community Detection ---
+community:
+  algorithm: louvain
+  resolution: 1.0
+  deviation_threshold_sigma: 2.0  # Flag if > 2σ from centroid
+
+# --- Dashboard ---
+dashboard:
+  theme: dark
+  port: 8501
+  title: "Sentinel-Graph — Identity Risk Intelligence"
+  refresh_interval_seconds: 2
